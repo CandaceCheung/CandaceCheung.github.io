@@ -15,7 +15,7 @@ export function Header(): JSX.Element {
     };
 
     const linkClick = () => {
-        setClicked(false)
+        setClicked(false);
     };
 
     return(
@@ -26,10 +26,23 @@ export function Header(): JSX.Element {
                 </div>
                 {(!isMobile || clicked) && (
                     <nav id="topnav" className={styles.nav}>
-
+                        <link>
+                            HOME
+                        </link>
+                        <link>
+                            PORTFOLIO
+                        </link>
+                        <link>
+                            CONTACT ME
+                        </link>
                     </nav>
+                )}
+                {isMobile && (
+                    <button>
+
+                    </button>
                 )}
             </div>
         </header >
-    )
+    );
 }
