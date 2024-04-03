@@ -4,10 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { HashRouter } from "react-router-dom";
+import { Routes, Route } from "react-router";
+import NotFound from "./pages/error/NotFound";
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <HashRouter>
+      <Routes>
+        <App />
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
 
